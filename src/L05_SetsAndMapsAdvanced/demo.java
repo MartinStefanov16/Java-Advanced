@@ -1,12 +1,15 @@
 package L05_SetsAndMapsAdvanced;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
 import java.util.TreeSet;
 
 public class demo {
     public static void main(String[] args) {
-        HashSet<Integer> hashSet = new HashSet<>();
-        TreeSet<Integer> treeSet = new TreeSet<>();
+        Set<Integer> hashSet = new HashSet<>();
+        Set<Integer> treeSet = new TreeSet<>();
+        Set<Integer> linkedHashSet = new LinkedHashSet<>();
 
 
         hashSet.add(1);
