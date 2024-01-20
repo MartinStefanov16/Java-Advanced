@@ -1,8 +1,6 @@
 package L00_ExamProblems;
 
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 import static java.lang.System.in;
 

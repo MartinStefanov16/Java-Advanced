@@ -20,9 +20,9 @@ public class p07 {
 
         matrix = fillMatrix(matrix,rows,cols);
         // TODO - temp?
-        printMatrix(matrix);
-        matrix.get(0).set(0,0);
-        printMatrix(matrix);
+        //printMatrix(matrix);
+        //matrix.get(0).set(0,0);
+        //printMatrix(matrix);
 
         String input = scanner.nextLine();
         while (!input.equals("nuke")){
@@ -30,7 +30,15 @@ public class p07 {
             int targetCol = Integer.parseInt(input.split(" ")[1]);
             int explosionRadius = Integer.parseInt(input.split(" ")[2]);
 
-            
+            System.out.println(matrix.get(targetRow).remove(targetCol));
+            System.out.println(matrix.get(targetRow).remove(targetCol));
+            System.out.println(matrix.get(targetRow).remove(targetCol));
+
+            // destroy current ROW
+            for (int i = 0; i < explosionRadius; i++) {
+                //matrix.get(rows).remove()
+
+            }
 
 
             input = scanner.nextLine();

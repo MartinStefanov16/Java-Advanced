@@ -1,17 +1,13 @@
-package temp;
+package L04_Matrixes_Excercise;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 import static java.lang.System.in;
 
-public class lmao {
+public class P07v2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(in);
 
-
-
+        
     }
 }
