@@ -3,7 +3,9 @@ package temp;
 public class BogoSort {
     public static void main(String[] args) {
        //int[] array = { 3, 2, 6, 5, 1, 0, 8, 4, 7};
-       int[] array = { 3, 2, 6, 5, 1, 8, 4};
+       int[] array = { 3, 2, 6, 5, 1, 8};
+
+
 
 
 //       boolean finished = true;
@@ -19,7 +21,7 @@ public class BogoSort {
 //
 //       }
 
-        for (int i = 0; i <= 10_000_000; i++) {
+        for (int i = 1; i <= Integer.MAX_VALUE; i++) {
             shuffle(array);
 
             if (isSorted(array)) {
@@ -28,6 +30,7 @@ public class BogoSort {
                 printArray(array);
                 return;
             }
+            printArray(array);
         }
         System.out.println("Failed!");
         printArray(array);

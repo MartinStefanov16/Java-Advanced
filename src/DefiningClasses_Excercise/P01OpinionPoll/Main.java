@@ -1,10 +1,10 @@
-package DefiningClasses_Excercise.P01;
+package DefiningClasses_Excercise.P01OpinionPoll;
 
 import java.util.*;
 
 import static java.lang.System.in;
 
-public class OpinionPoll {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(in);
 

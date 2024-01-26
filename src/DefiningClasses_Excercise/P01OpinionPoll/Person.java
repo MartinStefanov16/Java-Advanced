@@ -1,4 +1,4 @@
-package DefiningClasses_Excercise.P01;
+package DefiningClasses_Excercise.P01OpinionPoll;
 
 public class Person {
    private String name;
