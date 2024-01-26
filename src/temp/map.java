@@ -11,6 +11,6 @@ public class map {
         map.put("b", 2);
         map.put("c", 3);
 
-        map.forEach((a, b) -> System.out.println(a + " " + b) );
+        map.forEach((a, b) -> System.out.println(b) );
     }
 }
