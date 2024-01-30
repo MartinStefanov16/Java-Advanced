@@ -17,8 +17,11 @@ public class main {
             trainers.add(trainer2);
             trainers.add(trainer3);
 
-            trainers.stream().sorted((t1,t2) -> Integer.compare(t1.getBadges(), t2.getBadges()))
-                    .forEach(System.out::println);
+//            trainers.stream().sorted((t1,t2) -> Integer.compare(t1.getBadges(), t2.getBadges()))
+//                    .forEach(System.out::println);
+
+        trainers.stream().sorted((t1,t2) -> Integer.compare(t1.getBadges(), t2.getBadges()))
+                .forEach(System.out::println);
 
 
 
