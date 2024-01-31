@@ -12,6 +12,6 @@ public class Main {
         Fish pike = new Fish("Pike", 4, "spring");
         Fish catfish = new Fish("Catfish", 8, "summer");
 
-        pond.report();
+        System.out.println(pond.getCount());
     }
 }
