@@ -5,6 +5,35 @@ public class Vehicle {
     private int mileage;
     private String damage;
 
+    public String getVIN() {
+        return VIN;
+    }
+
+    public void setVIN(String VIN) {
+        this.VIN = VIN;
+    }
+
+    public int getMileage() {
+        return mileage;
+    }
+
+    public void setMileage(int mileage) {
+        this.mileage = mileage;
+    }
+
+    public String getDamage() {
+        return damage;
+    }
+
+    public void setDamage(String damage) {
+        this.damage = damage;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Damage: %s, Vehicle: %s (%d km)", damage,VIN, mileage);
+    }
+
     public Vehicle(java.lang.String VIN, int mileage, java.lang.String damage) {
         this.VIN = VIN;
         this.mileage = mileage;
