@@ -12,6 +12,20 @@ public class Main {
         Fish pike = new Fish("Pike", 4, "spring");
         Fish catfish = new Fish("Catfish", 8, "summer");
 
-        System.out.println(pond.getCount());
+        pond.addFish(trout);
+        pond.addFish(perch);
+        pond.addFish(pike);
+
+        System.out.println(pond.removeFish("Trout"));  //true
+        System.out.println(pond.removeFish("Carp"));  //false
+        System.out.println(pike.getMatingSeason());  //spring
+
+        pond.addFish(catfish);
+
+        System.out.println(pond.getOldestFish().getSpecies());  //Catfish
+
+        System.out.println(pond.getVacancies()); //2
+
+        System.out.println(pond.report());
     }
 }

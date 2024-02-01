@@ -2,6 +2,7 @@ package fishingPond;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Pond {
     private List<Fish> fishes;
@@ -18,25 +19,37 @@ public class Pond {
         }
     }
 
-    public boolean  removeFish(String species){
+    public boolean removeFish(String species){
 
-        if (this.fishes.contains(species)) {
-            this.fishes.remove(species);
-            return true;
+        for (Fish fish : this.fishes) {
+
+            if (fish.getSpecies().equals(species)) {
+                this.fishes.remove(fish);
+                return true;
+            }
+
         }
 
         return false;
     }
 
-    public int getOldestFish(){
-        int oldestFish = Integer.MIN_VALUE;
+    public Fish getOldestFish(){
+//        int oldestFish = Integer.MIN_VALUE;
+//
+//        for (Fish fish : this.fishes) {
+//            if (fish.getAge() > oldestFish){
+//                oldestFish = fish.getAge();
+//            }
+//        }
+//        return oldestFish;
 
-        for (Fish fish : this.fishes) {
-            if (fish.getAge() > oldestFish){
-                oldestFish = fish.getAge();
-            }
-        }
-        return oldestFish;
+       return this.fishes.stream()
+                .sorted((f1,f2) -> Integer.compare(f2.getAge(), f1.getAge()))
+                .collect(Collectors.toList())
+                .get(0);
+
+
+
     }
 
     public Fish getFish(String species){
@@ -60,7 +73,7 @@ public class Pond {
     public String report(){
         StringBuilder text = new StringBuilder();
 
-        text.append("Fishes in the pond:/n");
+        text.append("Fishes in the pond:\n");
 
         this.fishes.forEach(f -> text.append(f.toString()));
 
