@@ -20,17 +20,20 @@ public class House {
 
     public boolean removeKid(String name){
         for (Kid kid : this.data) {
-            if (kid.getName().equals(name));
-            this.data.remove(kid);
-            return true;
+            if (kid.getName().equals(name)){
+                this.data.remove(kid);
+                return true;
+            }
+
         }
         return false;
     }
 
     public Kid getKid(String street){
-        for (Kid kid : this.data) {
-            if (kid.getName().equals(street));
-            return kid;
+        for (Kid kiddie : this.data) {
+            if (kiddie.getStreet().equals(street)){
+                return kiddie;
+            }
         }
         return null;
     }
@@ -39,11 +42,16 @@ public class House {
         return data.size();
     }
 
-    public void getStatistics(){
+    public String getStatistics(){
         StringBuilder text = new StringBuilder();
         text.append("Children who visited a house for candy:\n");
 
-        this.data.stream().forEach(k -> text.append(k.toString()));
+        for (Kid kid : this.data) {
+            text.append(kid.getName() + " from " + kid.getStreet() + " street\n");
+
+        }
+
+        return text.toString();
 
     }
 }
