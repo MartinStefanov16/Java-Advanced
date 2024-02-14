@@ -121,7 +121,6 @@ public class MouseInTheKitchen {
             }
             System.out.println();
         }
-
     }
 
     private static boolean outOfBounds(int newRow, int newCol, int row, int col) {
