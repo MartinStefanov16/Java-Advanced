@@ -6,16 +6,9 @@ public class demo {
     public static void main(String[] args) {
 
 
-        ArrayDeque<String> altitudes = new ArrayDeque<>();
-        int altitudeReached = 0;
-
-
-        for (int i = 0; i < 5; i++) {
-            String current = "Altitude " + String.valueOf(altitudeReached);
-            altitudes.offer(current);
-            altitudeReached++;
-
-        }
-        System.out.println();
+        double milk = 60;
+        double cacao = 60;
+        double cacaoPercentage = Math.ceil(cacao / (milk + cacao) * 100);
+        System.out.println(cacaoPercentage);
     }
 }
